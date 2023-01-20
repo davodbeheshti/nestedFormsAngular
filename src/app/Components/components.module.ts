@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from './../Shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -22,6 +23,7 @@ import { UserInformationComponent } from './steps-user-information/user-informat
     CommonModule,
     SharedModule,
     ComponentsRoutingModule
-  ]
+  ],
+  exports : [StepsUserInformationComponent],
 })
 export class ComponentsModule { }
