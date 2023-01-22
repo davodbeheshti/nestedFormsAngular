@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {FormGroup} from '@angular/forms'
+
 
 @Component({
   selector: 'app-user-information',
@@ -8,6 +10,8 @@ import { Component, OnInit } from '@angular/core';
 export class UserInformationComponent implements OnInit {
 
   constructor() { }
+
+  private form : FormGroup;
 
   ngOnInit(): void {
   }
