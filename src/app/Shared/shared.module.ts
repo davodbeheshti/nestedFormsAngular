@@ -17,7 +17,7 @@ const materialPackages = [MatTabsModule]
     FormsModule,
     MatTabsModule
   ],
-  exports: [MatTabsModule]
+  exports: [MatTabsModule, ReactiveFormsModule, FormsModule]
 })
 
 export class SharedModule { }
