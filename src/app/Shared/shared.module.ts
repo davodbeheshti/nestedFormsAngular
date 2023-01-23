@@ -4,10 +4,12 @@ import { CommonModule } from '@angular/common';
 
 // importing packages material
 import { MatTabsModule } from '@angular/material/tabs';
+import {MatInputModule} from '@angular/material/input';
+
 
 
 // packages material
-const materialPackages = [MatTabsModule]
+const materialPackages = [MatTabsModule , MatInputModule]
 
 @NgModule({
   declarations: [],
@@ -15,9 +17,9 @@ const materialPackages = [MatTabsModule]
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
-    MatTabsModule
+    ...materialPackages
   ],
-  exports: [MatTabsModule, ReactiveFormsModule, FormsModule]
+  exports: [...materialPackages, ReactiveFormsModule, FormsModule]
 })
 
 export class SharedModule { }
