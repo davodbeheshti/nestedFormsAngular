@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup} from '@angular/forms'
+import { FormControl, FormGroup } from '@angular/forms'
 
 
 @Component({
@@ -11,9 +11,20 @@ export class UserInformationComponent implements OnInit {
 
   constructor() { }
 
-  private form : FormGroup;
+  form: FormGroup;
 
   ngOnInit(): void {
+    this.form = new FormGroup({
+      name: new FormControl(),
+      lastName: new FormControl(),
+      phoneNumber: new FormControl(),
+      nationalCode: new FormControl(),
+      gender: new FormControl(),
+      fatherName: new FormControl(),
+      userName: new FormControl(),
+      email: new FormControl(),
+      birthDate: new FormControl(),
+    })
   }
 
 }
