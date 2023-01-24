@@ -27,8 +27,5 @@ export class UserInformationComponent implements OnInit {
     })
   }
 
-  test() {
-    console.log(this.form.value);
-  }
 }
 
