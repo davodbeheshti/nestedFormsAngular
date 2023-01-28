@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 
 // importing packages material
 import { MatTabsModule } from '@angular/material/tabs';
-import {MatInputModule} from '@angular/material/input';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatRadioModule } from '@angular/material/radio';
+
 
 // packages material
-const materialPackages = [MatTabsModule , MatInputModule , MatDatepickerModule , MatNativeDateModule ]
+const materialPackages = [MatTabsModule, MatInputModule, MatDatepickerModule, MatNativeDateModule, MatRadioModule]
 
 
 @NgModule({
