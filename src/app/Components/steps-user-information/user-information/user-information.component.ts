@@ -21,7 +21,6 @@ export class UserInformationComponent implements OnInit {
       nationalCode: new FormControl(),
       gender: new FormControl(),
       fatherName: new FormControl(),
-      userName: new FormControl(),
       email: new FormControl(),
       birthDate: new FormControl(),
     })
