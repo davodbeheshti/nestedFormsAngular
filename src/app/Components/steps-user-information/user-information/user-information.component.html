@@ -1,20 +1,47 @@
-<div class="container mt-4">
+<div class="container mt-5">
     <form [formGroup]="form">
-        <mat-form-field class="example-full-width mx-3" appearance="fill">
-            <mat-label>Name</mat-label>
-            <input matInput placeholder=" " formControlName="name">
-        </mat-form-field>
-        <mat-form-field class="example-full-width mx-3" appearance="fill">
-            <mat-label>Last Name</mat-label>
-            <input matInput placeholder=" " formControlName="lastName">
-        </mat-form-field>
-        <mat-form-field class="example-full-width mx-3" appearance="fill">
-            <mat-label>Phone Number</mat-label>
-            <input matInput type="number" formControlName="phoneNumber">
-        </mat-form-field>
-        <mat-form-field class="example-full-width mx-3" appearance="fill">
-            <mat-label>NationalCode</mat-label>
-            <input matInput type="number" formControlName="nationalCode">
-        </mat-form-field>
+        <div class="d-flex align-items-center justify-content-center">
+            <mat-form-field class="example-full-width mx-3 w-25" appearance="fill">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder=" " formControlName="name">
+            </mat-form-field>
+            <mat-form-field class="example-full-width mx-3 w-25" appearance="fill">
+                <mat-label>Last Name</mat-label>
+                <input matInput placeholder=" " formControlName="lastName">
+            </mat-form-field>
+            <mat-form-field class="example-full-width mx-3 w-25" appearance="fill">
+                <mat-label>Phone Number</mat-label>
+                <input matInput type="number" formControlName="phoneNumber">
+            </mat-form-field>
+            <mat-form-field class="example-full-width mx-3 w-25" appearance="fill">
+                <mat-label>NationalCode</mat-label>
+                <input matInput type="number" formControlName="nationalCode">
+            </mat-form-field>
+        </div>
+        <div class="d-flex align-items-center justify-content-center">
+            <mat-radio-group class="example-full-width mx-3 w-25" appearance="fill" aria-label="Select an option">
+                <div class="d-flex flex-column">
+                    <mat-label class="mb-3">Gender</mat-label>
+                    <div class="d-flex align-items-center">
+                        <mat-radio-button class="mx-2" formControlName="gender" value="mail">Mail</mat-radio-button>
+                        <mat-radio-button class="mx-2" formControlName="gender" value="femail">Femail</mat-radio-button>
+                    </div>
+                </div>
+            </mat-radio-group>
+            <mat-form-field class="example-full-width mx-3 w-25" appearance="fill">
+                <mat-label>Father Name</mat-label>
+                <input matInput placeholder=" " formControlName="fatherName">
+            </mat-form-field>
+            <mat-form-field class="example-full-width mx-3 w-25" appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput type="number" formControlName="email">
+            </mat-form-field>
+            <mat-form-field class="example-full-width mx-3 w-25" appearance="fill">
+                <mat-label>BirtDate</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="birthDate">
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+        </div>
     </form>
 </div>
