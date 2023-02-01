@@ -1,3 +1,4 @@
+import { FormGroup, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +10,16 @@ export class JobsInformationComponent implements OnInit {
 
   constructor() { }
 
+  form: FormGroup;
+
   ngOnInit(): void {
+    this.form = new FormGroup({
+      nameJob: new FormControl(),
+      nameCompony: new FormControl(),
+      workPhone: new FormControl(),
+      workAdress: new FormControl(),
+      descriptionJob: new FormControl(),
+    })
   }
 
 }
