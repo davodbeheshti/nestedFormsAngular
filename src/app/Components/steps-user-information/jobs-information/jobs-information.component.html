@@ -1,1 +1,43 @@
-<p>jobs-information works!</p>
+<div class="container mt-5">
+    <form [formGroup]="form">
+        <div class="d-flex align-items-center justify-content-center flex-column">
+            <div class="row w-100">
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                    <mat-form-field class="w-75" appearance="fill">
+                        <mat-label>Name Job</mat-label>
+                        <input matInput placeholder=" " formControlName="nameJob">
+                    </mat-form-field>
+                </div>
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                    <mat-form-field class="w-75" appearance="fill">
+                        <mat-label>Name Compony</mat-label>
+                        <input matInput placeholder=" " formControlName="nameCompony">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row w-100">
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                    <mat-form-field class="w-75" appearance="fill">
+                        <mat-label>Work Phone</mat-label>
+                        <input matInput type="number" formControlName="workPhone">
+                    </mat-form-field>
+                </div>
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                    <mat-form-field class="w-75" appearance="fill">
+                        <mat-label>Work Adress</mat-label>
+                        <input matInput placeholder=" " formControlName="workAdress">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row w-100">
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                    <mat-form-field class="w-75" appearance="fill">
+                        <mat-label>Description</mat-label>
+                        <textarea formControlName="description" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+                            cdkAutosizeMaxRows="5"></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
