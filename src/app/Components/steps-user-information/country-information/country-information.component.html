@@ -1,1 +1,39 @@
-<p>country-information works!</p>
+<div class="container mt-5">
+    <form [formGroup]="form">
+        <div class="d-flex align-items-center justify-content-center flex-column">
+            <div class="row w-100">
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                    <mat-form-field class="w-75" appearance="fill">
+                        <mat-label>Select Country</mat-label>
+                        <mat-select formControlName="selectCountry">
+                            <mat-option *ngFor="let item of countries" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                    <mat-form-field class="w-75" appearance="fill">
+                        <mat-label>Select Country</mat-label>
+                        <mat-select formControlName="selectCity">
+                            <mat-option *ngFor="let item of cities" [value]="item.id">
+                                {{item.name}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row w-100 mt-4">
+                <div class="col-6 d-flex justify-content-center align-items-center">
+                    <mat-form-field class="w-75" appearance="fill">
+                        <mat-label>Address</mat-label>
+                        <textarea formControlName="address" matInput cdkTextareaAutosize #autosize="cdkTextareaAutosize" cdkAutosizeMinRows="1"
+                            cdkAutosizeMaxRows="5"></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<button (click)="test()">test</button>
