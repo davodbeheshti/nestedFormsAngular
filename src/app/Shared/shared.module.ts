@@ -8,10 +8,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 // packages material
-const materialPackages = [MatTabsModule, MatInputModule, MatDatepickerModule, MatNativeDateModule, MatRadioModule]
+const materialPackages = [MatTabsModule, MatInputModule, MatDatepickerModule, MatNativeDateModule, MatRadioModule , MatSelectModule]
 
 
 @NgModule({
