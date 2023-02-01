@@ -35,8 +35,4 @@ export class CountryInformationComponent implements OnInit {
 
   }
 
-  test() {
-    console.log(this.form.value);
-  }
-
 }
