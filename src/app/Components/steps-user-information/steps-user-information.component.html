@@ -1,11 +1,14 @@
-<mat-tab-group mat-align-tabs="center">
+<mat-tab-group mat-align-tabs="center" [formGroup]="form">
     <mat-tab label="User Information">
-        <app-user-information></app-user-information>
+        <app-user-information formControlName="UserInformationForm"></app-user-information>
     </mat-tab>
     <mat-tab label="Country Information">
-        <app-country-information></app-country-information>
+        <app-country-information formControlName="CountryInformationForm"></app-country-information>
     </mat-tab>
     <mat-tab label="Jobs Information">
-        <app-jobs-information></app-jobs-information>
+        <app-jobs-information formControlName="JobsInformationForm"></app-jobs-information>
     </mat-tab>
 </mat-tab-group>
+
+
+<button (click)="test()">test</button>
