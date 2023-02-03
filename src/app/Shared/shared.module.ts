@@ -8,23 +8,30 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatRadioModule } from '@angular/material/radio';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
+import { CustomeInputTextComponent } from './customInputs/custome-input-text/custome-input-text.component';
+import { CustomeInputNumberComponent } from './customInputs/custome-input-number/custome-input-number.component';
 
 
 
 // packages material
-const materialPackages = [MatTabsModule, MatInputModule, MatDatepickerModule, MatNativeDateModule, MatRadioModule , MatSelectModule]
+const materialPackages = [MatTabsModule, MatInputModule, MatDatepickerModule, MatNativeDateModule, MatRadioModule, MatSelectModule]
+
+// shared component
+const sharedProjectComponent = [CustomeInputTextComponent, CustomeInputNumberComponent]
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ...sharedProjectComponent
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
     ...materialPackages
   ],
-  exports: [...materialPackages, ReactiveFormsModule, FormsModule]
+  exports: [...materialPackages, ...sharedProjectComponent, ReactiveFormsModule, FormsModule]
 })
 
 export class SharedModule { }
