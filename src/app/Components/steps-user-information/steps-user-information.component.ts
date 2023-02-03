@@ -1,3 +1,4 @@
+import { FormGroup, FormControl } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,7 +10,18 @@ export class StepsUserInformationComponent implements OnInit {
 
   constructor() { }
 
+  form: FormGroup;
+
   ngOnInit(): void {
+    this.form = new FormGroup({
+      UserInformationForm: new FormControl(),
+      CountryInformationForm: new FormControl(),
+      JobsInformationForm: new FormControl()
+    })
+  }
+
+  test() {
+    console.log(this.form.value);
   }
 
 }
